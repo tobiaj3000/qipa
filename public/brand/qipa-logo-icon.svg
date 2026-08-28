@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <rect width="512" height="512" rx="112" fill="#0B0F19"/>
+
+  <!-- Outer ring -->
+  <circle cx="256.0" cy="256.0" r="180" fill="none" stroke="#4F7CFF" stroke-width="28"/>
+
+  <!-- Q tail slash -->
+  <line x1="316.0" y1="296.0" x2="476.0" y2="446.0"
+        stroke="#9B2848" stroke-width="28" stroke-linecap="round"/>
+
+  <!-- Inner intelligence dot -->
+  <circle cx="256.0" cy="256.0" r="24" fill="#4F7CFF" opacity="0.6"/>
+</svg>
