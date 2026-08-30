@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import { TrackedLink } from "@/components/TrackedLink";
 
 export const metadata: Metadata = {
   title: "Vacation Rental & Hospitality Software",
@@ -113,9 +113,14 @@ export default function SolutionsPage() {
           <h2 className="font-display text-3xl font-semibold tracking-[-0.04em]">
             Stop managing software. Start running your business.
           </h2>
-          <Link href="/contact" className="btn-primary mt-8 h-12 px-7 text-sm">
-            Book a Demo
-          </Link>
+          <TrackedLink
+            href="/get-started"
+            event="get_started_click"
+            eventProps={{ source: "solutions" }}
+            className="btn-primary mt-8 h-12 px-7 text-sm"
+          >
+            Get Started
+          </TrackedLink>
         </div>
       </section>
     </>

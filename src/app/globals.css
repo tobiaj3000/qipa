@@ -174,6 +174,37 @@ a {
   transform: translateY(-1px);
 }
 
+.price-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 4px;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--signal) 35%, var(--navy-3));
+  outline: none;
+}
+
+.price-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 999px;
+  background: var(--mist);
+  box-shadow: 0 0 0 4px rgba(79, 124, 255, 0.22);
+  cursor: pointer;
+}
+
+.price-slider::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+  border: none;
+  border-radius: 999px;
+  background: var(--mist);
+  box-shadow: 0 0 0 4px rgba(79, 124, 255, 0.22);
+  cursor: pointer;
+}
+
 .node-pulse {
   transform-origin: center;
   animation: pulse 4.5s ease-in-out infinite;

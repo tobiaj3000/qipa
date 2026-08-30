@@ -23,7 +23,7 @@ const columns = [
     title: "Company",
     links: [
       { href: "/pricing", label: "Pricing" },
-      { href: "/contact", label: "Book a demo" },
+      { href: "/get-started", label: "Get Started" },
       { href: "mailto:hello@qipa.ai", label: "hello@qipa.ai" },
     ],
   },

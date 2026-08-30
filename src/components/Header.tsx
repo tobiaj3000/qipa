@@ -3,13 +3,14 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
+import { TrackedLink } from "./TrackedLink";
 import { Logo } from "./Logo";
 
 const links = [
   { href: "/platform", label: "Platform" },
   { href: "/solutions", label: "Solutions" },
   { href: "/pricing", label: "Pricing" },
-  { href: "/contact", label: "Demo" },
+  { href: "/get-started", label: "Get Started" },
 ];
 
 export function Header() {
@@ -59,9 +60,14 @@ export function Header() {
         </nav>
 
         <div className="hidden md:block">
-          <Link href="/contact" className="btn-primary h-10 px-5 text-sm">
-            Book a Demo
-          </Link>
+          <TrackedLink
+            href="/get-started"
+            event="get_started_click"
+            eventProps={{ source: "header" }}
+            className="btn-primary h-10 px-5 text-sm"
+          >
+            Get Started
+          </TrackedLink>
         </div>
 
         <button
@@ -110,13 +116,15 @@ export function Header() {
                 {link.label}
               </Link>
             ))}
-            <Link
-              href="/contact"
+            <TrackedLink
+              href="/get-started"
+              event="get_started_click"
+              eventProps={{ source: "header_mobile" }}
               onClick={closeMenu}
               className="btn-primary mt-2 h-12 px-5 text-sm"
             >
-              Book a Demo
-            </Link>
+              Get Started
+            </TrackedLink>
           </div>
         </nav>
       )}

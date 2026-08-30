@@ -6,6 +6,7 @@ import { CtaOperator } from "@/components/CtaOperator";
 import { HeroProperty } from "@/components/HeroProperty";
 import { IntegrationStrip } from "@/components/IntegrationStrip";
 import { SpaceBackdrop } from "@/components/SpaceBackdrop";
+import { TrackedLink } from "@/components/TrackedLink";
 
 export const metadata: Metadata = {
   title: {
@@ -13,7 +14,7 @@ export const metadata: Metadata = {
       "Qipa — AI Property Management Software for Hospitality Businesses",
   },
   description:
-    "Qipa is the AI operating system for hospitality businesses. Manage properties, sync every booking channel, automate guest communication, optimize revenue, and run operations from one platform. Book a demo.",
+    "Qipa is the AI operating system for hospitality businesses. Manage properties, sync every booking channel, automate guest communication, optimize revenue, and run operations from one platform. Get started.",
   keywords: [
     "AI Property Management Software",
     "Property Management Software",
@@ -133,7 +134,7 @@ const jsonLd = {
   featureList: operations.map((item) => item.title),
   offers: {
     "@type": "Offer",
-    url: "/contact",
+    url: "/get-started",
     availability: "https://schema.org/OnlineOnly",
   },
 };
@@ -173,13 +174,15 @@ export default function Home() {
               className="rise mt-8 flex flex-col gap-3 sm:flex-row"
               style={{ animationDelay: "280ms" }}
             >
-              <Link href="/contact" className="btn-primary h-12 px-7 text-sm">
-                Book a Demo
-              </Link>
-              <Link
-                href="/contact?intent=start"
-                className="btn-ghost h-12 px-7 text-sm"
+              <TrackedLink
+                href="/get-started"
+                event="get_started_click"
+                eventProps={{ source: "hero" }}
+                className="btn-primary h-12 px-7 text-sm"
               >
+                Get Started
+              </TrackedLink>
+              <Link href="/get-started" className="btn-ghost h-12 px-7 text-sm">
                 Start Free
               </Link>
             </div>
@@ -291,7 +294,7 @@ export default function Home() {
           </div>
           <p className="mt-8 text-sm text-quiet">
             Don&apos;t see yours?{" "}
-            <Link href="/contact?intent=start" className="text-mist hover:text-paper">
+            <Link href="/get-started" className="text-mist hover:text-paper">
               Start free
             </Link>{" "}
             and we&apos;ll connect it for the trial.
@@ -429,21 +432,23 @@ export default function Home() {
               <span className="block text-quiet">Start running your business.</span>
             </h2>
             <p className="mt-6 max-w-xl text-[1.05rem] leading-8 text-quiet">
-              Book a personalised demo and see how Qipa can automate your
-              hospitality operation.{" "}
+              Create your Qipa account and we&apos;ll move your properties,
+              bookings, and channels for you.{" "}
               <Link href="/pricing" className="text-mist hover:text-paper">
                 See pricing
               </Link>
               .
             </p>
             <div className="mt-10 flex flex-col gap-3 sm:flex-row">
-              <Link href="/contact" className="btn-primary h-12 px-7 text-sm">
-                Book a Demo
-              </Link>
-              <Link
-                href="/contact?intent=start"
-                className="btn-ghost h-12 px-7 text-sm"
+              <TrackedLink
+                href="/get-started"
+                event="get_started_click"
+                eventProps={{ source: "close" }}
+                className="btn-primary h-12 px-7 text-sm"
               >
+                Get Started
+              </TrackedLink>
+              <Link href="/get-started" className="btn-ghost h-12 px-7 text-sm">
                 Start Free
               </Link>
             </div>

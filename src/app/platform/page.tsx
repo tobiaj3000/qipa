@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { ConnectedFlow } from "@/components/ConnectedFlow";
 import { IntegrationStrip } from "@/components/IntegrationStrip";
 import { NetworkRings } from "@/components/NetworkField";
+import { TrackedLink } from "@/components/TrackedLink";
 
 export const metadata: Metadata = {
   title: "Hospitality Operating System",
@@ -56,9 +56,14 @@ export default function PlatformPage() {
               guests, operations, revenue, and owners stay in one source of
               truth.
             </p>
-            <Link href="/contact" className="btn-primary mt-8 h-12 px-7 text-sm">
-              Book a Demo
-            </Link>
+            <TrackedLink
+              href="/get-started"
+              event="get_started_click"
+              eventProps={{ source: "platform" }}
+              className="btn-primary mt-8 h-12 px-7 text-sm"
+            >
+              Get Started
+            </TrackedLink>
           </div>
           <div className="lg:col-span-5">
             <NetworkRings className="mx-auto w-full max-w-[380px]" />
@@ -151,9 +156,14 @@ export default function PlatformPage() {
           <h2 className="font-display text-3xl font-semibold tracking-[-0.04em] sm:text-4xl">
             See it against your stack.
           </h2>
-          <Link href="/contact" className="btn-primary mt-8 h-12 px-7 text-sm">
-            Book a Demo
-          </Link>
+          <TrackedLink
+            href="/get-started"
+            event="get_started_click"
+            eventProps={{ source: "platform_close" }}
+            className="btn-primary mt-8 h-12 px-7 text-sm"
+          >
+            Get Started
+          </TrackedLink>
         </div>
       </section>
     </>
